@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Прокат палаток «НИКМАРКЕТ»</title>
+    <title>Прокат палаток «Медведь»</title>
     <style>
         body {
             margin: 0;
@@ -30,6 +30,18 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
+        .product-card {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: #000; /* Черный квадрат */
+        }
+
+            .product-card.white {
+                background-color: #fff; /* Белый квадрат */
+            }
     </style>
 </head>
 <body>
@@ -45,8 +57,11 @@
     </section>
 
     <section>
-        <h2>Палатки</h2>
-        <p>Добавим позже галерею...</p>
+        <h2>Наши палатки</h2>
+        <div class="product-card"></div> <!-- Черный квадрат -->
+        <div class="product-card white"></div> <!-- Белый квадрат -->
+        <div class="product-card"></div> <!-- Черный квадрат -->
+        <div class="product-card white"></div> <!-- Белый квадрат -->
     </section>
 
     <section id="contact">
