@@ -3,116 +3,62 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Прокат палаток «Медведь»</title>
+    <title>НИКМАРКЕТ</title>
     <style>
         body {
             margin: 0;
             font-family: sans-serif;
-            background: #f9f9f9;
         }
 
-        /* Шапка сайта */
         header {
-            background: black;
+            background: green;
             color: white;
-            padding: 20px;
-            position: relative;
+            padding: 80px 20px;
+            text-align: center;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Меню */
-        nav {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background: white;
-            color: black;
-            border-top: 1px solid #ccc;
-        }
-
-            nav a {
-                padding: 15px;
-                text-decoration: none;
-                color: black;
-                border-bottom: 1px solid #ddd;
-            }
-
-                nav a:hover {
-                    background: #f0f0f0;
-                }
-
-        /* Бургер */
-        .burger {
-            font-size: 30px;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-
-        /* Основной контент */
         section {
             padding: 40px 20px;
             max-width: 1000px;
             margin: auto;
         }
 
-        .placeholder {
-            background: #ccc;
-            height: 200px;
-            margin-bottom: 20px;
+        .button {
+            background: #1a8f3b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="logo">Медведь</div>
-        <div class="burger" onclick="toggleMenu()">☰</div>
-        <nav id="menu">
-            <a href="#about">О нас</a>
-            <a href="#tents">Палатки</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+        <h1>НИКМАРКЕТ</h1>
+        <p>Палатки, которые выдерживают всё</p>
+        <a href="#contact" class="button">Заказать</a>
     </header>
 
-    <section id="about">
+    <section>
         <h2>О нас</h2>
         <p>Мы сдаем в аренду надёжные палатки для любых условий: от походов до фестивалей.</p>
-        <div class="placeholder"></div>
     </section>
 
-    <section id="tents">
+    <section>
         <h2>Палатки</h2>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
+        <p>Добавим позже галерею с образцами палаток...</p>
     </section>
 
-    <section id="contacts">
-        <h2>Контакты</h2>
+    <section id="contact">
+        <h2>Связаться с нами</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="ТВОЙ_КЛЮЧ_WEB3FORMS">
+            <input type="hidden" name="access_key" value="ТВОЙ_КЛЮЧ_ОТ_WEB3FORMS">
             <p><input type="text" name="name" placeholder="Ваше имя" required></p>
             <p><input type="email" name="email" placeholder="Email" required></p>
             <p><textarea name="message" placeholder="Сообщение" required></textarea></p>
             <p><button type="submit">Отправить</button></p>
         </form>
     </section>
-
-    <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-    </script>
 </body>
 </html>
 
