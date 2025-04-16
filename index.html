@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прокат палаток «НИК МАРКЕТ»</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1502920917128-1aa500764ce7') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .button {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Прокат палаток «Медведь»</h1>
+        <p>Палатки, которые выдерживают всё</p>
+        <a href="#contact" class="button">Заказать</a>
+    </header>
+
+    <section>
+        <h2>О нас</h2>
+        <p>Мы сдаем в аренду надёжные палатки для любых условий: от походов до фестивалей.</p>
+    </section>
+
+    <section>
+        <h2>Палатки</h2>
+        <p>Добавим позже галерею...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Связаться с нами</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ТВОЙ_КЛЮЧ_ОТ_WEB3FORMS">
+            <p><input type="text" name="name" placeholder="Ваше имя" required></p>
+            <p><input type="email" name="email" placeholder="Email" required></p>
+            <p><textarea name="message" placeholder="Сообщение" required></textarea></p>
+            <p><button type="submit">Отправить</button></p>
+        </form>
+    </section>
+</body>
+</html>
