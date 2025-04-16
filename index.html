@@ -11,9 +11,8 @@
             background: #f9f9f9;
         }
 
-        /* Шапка сайта */
         header {
-            background: #1a8f3b; /* зелёный */
+            background: #008000;
             color: white;
             padding: 20px;
             position: relative;
@@ -24,7 +23,6 @@
             font-weight: bold;
         }
 
-        /* Меню */
         nav {
             display: none;
             flex-direction: column;
@@ -48,7 +46,6 @@
                     background: #f0f0f0;
                 }
 
-        /* Бургер */
         .burger {
             font-size: 30px;
             cursor: pointer;
@@ -57,7 +54,6 @@
             top: 15px;
         }
 
-        /* Основной контент */
         section {
             padding: 40px 20px;
             max-width: 1000px;
@@ -69,6 +65,20 @@
             height: 200px;
             margin-bottom: 20px;
         }
+
+        .sber-button {
+            background-color: #21a038;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .sber-button:hover {
+                background-color: #18852c;
+            }
     </style>
 </head>
 <body>
@@ -105,14 +115,44 @@
             <p><textarea name="message" placeholder="Сообщение" required></textarea></p>
             <p><button type="submit">Отправить</button></p>
         </form>
+
+        <h3>Расчёт доставки СДЭК</h3>
+        <div id="for-cdek" style="margin-top: 20px;"></div>
+
+        <h3 style="margin-top: 40px;">Оплата онлайн</h3>
+        <!-- Кнопка оплаты Сбербанк -->
+        <form method="POST" action="https://securepayments.sberbank.ru/payment/rest/register.do">
+            <input type="hidden" name="userName" value="demo-api"> <!-- Заменить на свой -->
+            <input type="hidden" name="password" value="demo-password"> <!-- Заменить на свой -->
+            <input type="hidden" name="orderNumber" value="ORDER12345">
+            <input type="hidden" name="amount" value="10000"> <!-- сумма в копейках: 10000 = 100.00 руб -->
+            <input type="hidden" name="returnUrl" value="https://nikmarket.ru/thanks.html"> <!-- URL после оплаты -->
+            <input type="hidden" name="failUrl" value="https://nikmarket.ru/fail.html"> <!-- URL при ошибке -->
+            <button type="submit" class="sber-button">Оплатить через Сбербанк</button>
+        </form>
+
     </section>
 
     <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+
+    <!-- Виджет СДЭК -->
+    <script id="ISDEKWidjet" async type="text/javascript" src="https://widget.cdek.ru/widget/widjet.js" charset="UTF-8"></script>
+    <script>
+        window.ISDEKWidjet = {
+            defaultCity: 'Москва',
+            cityFrom: 'Москва',
+            country: 'Россия',
+            link: 'for-cdek',
+            path: 'https://widget.cdek.ru/widget/scripts/',
+            servicepath: 'https://widget.cdek.ru/widget/service/',
+        };
     </script>
 </body>
 </html>
+
 
