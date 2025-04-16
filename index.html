@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Добро пожаловать на мой сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокат палаток «НИКМАРКЕТ»</title>
     <style>
         body {
             margin: 0;
@@ -34,20 +34,25 @@
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на мой сайт</h1>
-        <p>Мы рады, что вы решили его посетить!</p>
-        <a href="#contact" class="button">Контакты</a>
+        <h1>Прокат палаток «Медведь»</h1>
+        <p>Палатки, которые выдерживают всё</p>
+        <a href="#contact" class="button">Заказать</a>
     </header>
 
     <section>
-        <h2>О сайте</h2>
-        <p>Этот сайт создан для демонстрации возможностей HTML и CSS.</p>
+        <h2>О нас</h2>
+        <p>Мы сдаем в аренду надёжные палатки для любых условий: от походов до фестивалей.</p>
     </section>
 
     <section>
-        <h2>Контакты</h2>
+        <h2>Палатки</h2>
+        <p>Добавим позже галерею...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Связаться с нами</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="ВАШ_КЛЮЧ_WEB3FORMS">
+            <input type="hidden" name="access_key" value="ТВОЙ_КЛЮЧ_ОТ_WEB3FORMS">
             <p><input type="text" name="name" placeholder="Ваше имя" required></p>
             <p><input type="email" name="email" placeholder="Email" required></p>
             <p><textarea name="message" placeholder="Сообщение" required></textarea></p>
@@ -56,3 +61,4 @@
     </section>
 </body>
 </html>
+
